@@ -10,7 +10,7 @@ First off, the target of an attack is almost always a web server. In order to un
 
 This is a diagram of a standard web host:
 
-[[Standard_Web_Host.gif]]
+![Standard_Web_Host.gif]
 
 Notice that the internet is asking to see certain websites hosted on the server (Sites 1, 2, and 3). The server gets the request, the server's CPU looks at the request, finds the requested data, and sends it back out.
 
