@@ -10,7 +10,7 @@ First off, the target of an attack is almost always a web server. In order to un
 
 This is a diagram of a standard web host:
 
-!(Standard_Web_Host.gif)
+![test](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Standard_Web_Host.gif)
 
 Notice that the internet is asking to see certain websites hosted on the server (Sites 1, 2, and 3). The server gets the request, the server's CPU looks at the request, finds the requested data, and sends it back out.
 
@@ -20,11 +20,11 @@ Web hosts/servers do not want to operate at their limit - that means that any ad
 
 Now, let's say Site 1 is linked from a popular blog. Suddenly, Requests for Site 1 increase in number, and the server spends more time processing requests to see Site 1 than the other sites.
 
-[[Requests_for_Site_1_increase.gif]]
+![fuck](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Requests_for_Site_1_increase.gif)
 
 No problem, yet. Now, however, Site 1 is linked to from Slashdot. Requests to see it surge in number. 
 
-[[Requests_for_site_1_surge.gif]]
+![this](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Requests_for_site_1_surge.gif)
 
 Keep in mind that most web hosts have many, many more than three sites on them - at this point, the server is nearing its physical limit. Usually, one of two things will happen next: 
 
@@ -35,7 +35,7 @@ There is only a slight difference between the "slashdot effect" and a Bandwidth 
 
 ### BANDWIDTH RAEP
 
-[[BANDWIDTH_RAEP.gif]]
+![shit](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/BANDWIDTH_RAEP.gif)
 
 Result: Site 1 is taken down in a quasi-legal manner.
 
@@ -61,7 +61,7 @@ The server has to know your IP address in order to send you anything, though, an
 
 On the internet, this is done with a process called the "TCP Handshake." This involves several "packets" of data being exchanged between your computer and the server, illustrated below. 
 
-[[Tcphandshakebe9.gif]]
+![fuck](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Tcphandshakebe9.gif)
 
 Afterwards, you are connected and can request a web page, etc. Additonally, RST = STFU, FIN = DONE SENDING. 
 
@@ -71,21 +71,21 @@ The internet spans many continents, with all sorts of different ways to get from
 
 Why? Because computers send MULTIPLE packets, not just one, greatly increasing the chance that one will get through at each of the three steps, completing the handshake and getting you connected. Or, rather, web servers send multiple "SYN/ACK" packets (LOL YES) when the receive a "SYN" (HAY R U THAR?) packet. If the computer that started the handshake doesn't respond, the following occurs. 
 
-[[Tcphandshakebrokehs5.gif]]
+![my](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Tcphandshakebrokehs5.gif)
 
 More importantly, the server has a limited number of connections it can maintain at once. When the server receives a SYN (HAY R U THAR?) packet from you, it takes up one slot sending SYN/ACK (LOL YES) packets back to you. 
 
-[[Ports01pw8.gif]]
+![life](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Ports01pw8.gif)
 
 If someone else tries to connect while you're talking to the server, they just go to a different port. 
 
-[[Ports02bn3.gif]]
+![fuck](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Ports02bn3.gif)
 
 If the TCP Handshake is completed, with your computer responding with a RST (KTHXBAI) packet, then the server is ready to process further requests from you, and it frees up the port that it was using to talk with you.
 
 What if you send a bunch of SYN packets, though? 
 
-[[Synfloodwe2.gif]]
+![everything](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Synfloodwe2.gif)
 
 #### CPURaep
 
@@ -93,7 +93,7 @@ However, once you stop sending SYN packets, the server will send SYN/ACKs to all
 
 If, however, the network hardware on the server is significantly better than the CPU, or the flood's dataforce has been doubled over 9000 times, the following can occur: 
 
-[[Cpuraepsh8.gif]]
+![balls](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Cpuraepxh8.gif)
 
 ### SMURF Attack
 
@@ -103,19 +103,18 @@ A more common (and more effective) form of this attack is to send SYN or SYN/ACK
 
 If UDP Packets are used, it is called a "FRAGGLE Attack" 
 
-[[Smurf.jpg]]
+![penis](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Smurf.jpg)
 
 ### Ping Flooding
 
 Not to be confused with a Ping of Death attack (now defunct, patched most everywhere since ~1999), this attack consists of saturating the target's bandwidth with ICMP echo packets (pings). It is hoped that the target will respond with reply packets, so that it consumes bandwidth going both ways. This only works if the attacker bandwidth is superior to the target bandwidth. 
 
-[[Pingflood.jpg]]
-
+![anon](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Pingflood.jpg)
 ### UDP Flooding
 
 This is a very simple type of flood, consisting of simply sending large numbers of UDP packets to the target to use up resources. For instance, the rok/i/ts program works by opening lots of UDP connections on lots of random ports. The server must then check for a listening program for each port, and then send a reply packet to the flooder (unless the flooder spoofs his ip). 
 
-[[Udpflood.jpg]]
+![forever](https://github.com/0xicl33n/bibanon/blob/master/Books/Guides/Newfags-Guide/offense/DDoS-Methods/Udpflood.jpg)
 
 ## DDoS
 
